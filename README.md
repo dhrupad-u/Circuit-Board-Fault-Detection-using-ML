@@ -46,24 +46,26 @@ The code :
 
 Folders in the project :
 
-1. Dataset : 
+1. Dataset :
    This folder consists of images from the database: https://github.com/tangsanli5201/DeepPCB
    This is a free dataset availble online which contains around 1100 images of PCB classified as Good and Bad.
    The size of the images has been reduced from 640*640 to 224*224 pixels, to help decrease the computional resources
    needed to train the model. This was atained by an anti-aliasing method, which helps in reducing image quality
    without major loss. All of the images are in binary format, i.e black and white where the black part indicated 
    the circuit components and the white parts show the empty space in the PCB layout.
+   
+   Download the dataset from the given link and save as a folder called 'Dataset' in your root directory.
 
-2. Static :
+3. Static :
    This folder contains the dataset of images used while testing using the Flask server. Altough the prediction on
    all these images are not accurate, it suffices the approximately 94% accuracy we have achieved. 
 
-3. Templates :
+4. Templates :
    This folder contains the .html files which are rendered by the Flask server when deployed. It has a home page 
    and a predict page. Home page lets the user choose any image from their file system and the predict page displays
    the image choosen with the result for the same as either good or bad
 
-4. model.h5 :
+5. model.h5 :
    This is the saved model after training the network, which is further used in both the files to predict the nature
    of the PCB, while testing.
    
